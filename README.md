@@ -43,13 +43,41 @@ In addition only some patches of each image are actually processed by the archit
 
 * ![NumPy]
 * ![PyTorch]
-
+* ![Matplotlib]
 ## Getting started
 
 ### Prerequisites
 
+If you are installing from source, you will need:
+- Python 3.8 or later (for Linux, Python 3.8.1+ is needed)
+- A C++17 compatible compiler, such as clang
+
+If you want to compile with CUDA support, install the following (note that CUDA is not supported on macOS)
+- [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) 11.0 or above
+- [NVIDIA cuDNN](https://developer.nvidia.com/cudnn) v7 or above
+- [Compiler](https://gist.github.com/ax3l/9489132) compatible with CUDA
+
+Note: You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardware
+
+If you want to disable CUDA support, export the environment variable `USE_CUDA=0`.
+Other potentially useful environment variables may be found in `setup.py`.
+
+If you are building for NVIDIA's Jetson platforms (Jetson Nano, TX1, TX2, AGX Xavier), Instructions to install PyTorch for Jetson Nano are [available here](https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/)
+
 ## Installation
 
+1) Clone the repo
+   ```sh
+   git clone https://github.com/MattiaLimone/HuggingGreen.git
+   ```
+2) Install the requirements
+   ```sh
+   pip install -r requirements.txt
+   ```
+3) Use the train script to train the model (Hyperparameters must be set inside this file)
+   ```sh
+   python train_script.py
+   ```
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
