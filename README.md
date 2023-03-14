@@ -6,7 +6,7 @@
 [![Issues][issues-shield]][issues-url]
 [![GNU General Public License v2.0][license-shield]][license-url]
 
-<h3 align="center">HuggingGreen</h3>
+<h1 align="center">HuggingGreen</h1>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -39,6 +39,33 @@ Furthermore, instead of redundant attention heads, GMM-ViT uses a mixture of key
 In addition only some patches of each image are actually processed by the architecture. An heuristic function will select which parts must be used in the training.
 </div>
 
+### Built With
+
+* ![NumPy]
+* ![PyTorch]
+
+## Getting started
+
+### Prerequisites
+
+## Installation
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Mattia Limone [[Linkedin profile](https://www.linkedin.com/in/mattia-limone/)]
+
+Carmine Iannotti [[Linkedin Profile](https://www.linkedin.com/in/carmine-iannotti-aa031b232/)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
