@@ -20,7 +20,11 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisites">Prerequisites</a>
+        <ul>
+          <li><a href="#pytorch-with-cuda">PyTorch with CUDA</a></li>
+        </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -48,11 +52,13 @@ In addition only some patches of each image are actually processed by the archit
 
 ### Prerequisites
 
-If you are installing from source, you will need:
+What you will need:
 - Python 3.8 or later (for Linux, Python 3.8.1+ is needed)
 - A C++17 compatible compiler, such as clang
 
-If you want to compile with CUDA support, install the following (note that CUDA is not supported on macOS)
+#### PyTorch with CUDA
+
+If you want to compile the PyTorch with CUDA support, install the following (note that CUDA is not supported on macOS)
 - [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) 11.0 or above
 - [NVIDIA cuDNN](https://developer.nvidia.com/cudnn) v7 or above
 - [Compiler](https://gist.github.com/ax3l/9489132) compatible with CUDA
