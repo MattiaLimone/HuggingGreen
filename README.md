@@ -58,17 +58,10 @@ What you will need:
 
 #### PyTorch with CUDA
 
-If you want to compile the PyTorch with CUDA support, install the following (note that CUDA is not supported on macOS)
-- [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) 11.0 or above
-- [NVIDIA cuDNN](https://developer.nvidia.com/cudnn) v7 or above
-- [Compiler](https://gist.github.com/ax3l/9489132) compatible with CUDA
-
-Note: You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardware
-
-If you want to disable CUDA support, export the environment variable `USE_CUDA=0`.
-Other potentially useful environment variables may be found in `setup.py`.
-
-If you are building for NVIDIA's Jetson platforms (Jetson Nano, TX1, TX2, AGX Xavier), Instructions to install PyTorch for Jetson Nano are [available here](https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/)
+To install PyTorch with CUDA in your local env:
+   ```sh
+   pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio===2.0.1 -f https://download.pytorch.org/whl/torch_stable.html
+   ```
 
 ## Installation
 
