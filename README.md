@@ -36,11 +36,7 @@
 
 ## About The Project
 <div style="text-align: justify"> 
-Multi-head attention is a crucial component in Transformers that has led to state-of-the-art performance in various natural language processing. Dividing an image in patch and interpreting each patch as a sequence as lead to the Vision Transformer. Recent research has shown that many of the attention heads in these models learn similar embeddings, which implies that removing some of them may not affect the model's performance.
-With this insight, we introduce a new Vision Transformer architecture called GMM-HViT.
-The architecture only processes certain patches of each image. During training, a heuristic function is used to determine which parts of the image should be utilized.
-Furthermore, instead of redundant attention heads, GMM-ViT uses a mixture of keys at each head that follows a Gaussian mixture model. This enables each attention head to efficiently focus on different segments of the input sequence. 
-In addition only some patches of each image are actually processed by the architecture. An heuristic function will select which parts must be used in the training.
+Vision Transformers (ViTs) have achieved state-of-the-art performance in many computer vision tasks. However, their high computational cost and energy consumption during training remain a major obstacle for their widespread adoption in resource-constrained scenarios. In this work, we propose a modified ViT architecture with probabilistic attention mechanisms that reduce the energy consumption during training without sacrificing the model's performance. Our approach utilize a probabilistic interpretation of the attention score in order to reduce the computational complexity required for self-attention, as well as a sparsity-inducing regularization term that encourages the attention weights to be more sparse. Additionally, we introduce a novel technique that selectively activates the attention mechanism only for important feature maps, further reducing energy consumption. We evaluate our proposed method on image classification datasets, and show that our method achieves comparable or better accuracy than the state-of-the-art ViT models while reducing energy consumption. The results aims to demonstrate the effectiveness of our modified ViT architecture in achieving energy-efficient training, which can benefit a wide range of applications, especially in resource-constrained environments. 
 </div>
 
 ### Built With
