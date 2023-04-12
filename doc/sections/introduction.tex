@@ -1,0 +1,27 @@
+\section{Introduction}
+Image recognition has been a prominent research area in the field of computer vision for decades. The advancements in deep learning have revolutionized image recognition by enabling computers to identify objects, patterns, and features in images with high accuracy. Convolutional neural networks (CNNs) have been the dominant approach for image recognition tasks, but recent research has shown that transformers can also achieve state-of-the-art performance in this domain.
+
+Transformers were initially developed for natural language processing tasks but have gained attention in the computer vision community due to their ability to model long-range dependencies and capture global context. The Vision Transformer (ViT) introduced by Dosovitskiy et al. \cite{DBLP:journals/corr/abs-2010-11929} has shown impressive performance in various image recognition tasks, surpassing the performance of CNNs on several benchmarks.
+
+In this paper, we attempt to go further and study the energy impact of these architectures and propose a version of the same model that makes use of a probabilistic attention mechanism in order to reduce electricity consumption.
+
+The paper is organized as follows. In section \ref{relatedwork}, we provide an overview of related work on transformers and their applications in computer vision.  In section \ref{goal}, we describe the work goal and the research questions this work is structured around. In section \ref{dataset}, we will present the datasets that we will use as benchmarks to compare our model with others in literature. In section \ref{executionplan}, we are going to describe the pipeline that we are going to follow. In section \ref{metrics}, we are going to specify the evaluation metrics to compare the model with others. In section \ref{architecture}, finally we will describe our architecture. In section \ref{conclusion}, we will present the results of the experiment.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Symbol} & \textbf{Description}        \\ \hline
+$ \textbf{ViT}$              & Vision Transformer \\
+$ \textbf{CNN}$              & Convolutional Neural Network \\
+$ \textbf{RQs}$              & Research Question \\
+$ \textbf{PDFs}$              & Probability Distribution Functions \\
+$ \textbf{MLE}$              & Maximum Likelihood Estimation \\
+$ \textbf{KWh}$              & KiloWatt-hour \\
+
+
+\hline
+\end{tabular}
+\caption{Symbols used throughout the document}
+\label{tab:symbols-table}
+\end{table}

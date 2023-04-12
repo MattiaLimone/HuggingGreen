@@ -1,0 +1,50 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{amsmath,amssymb,amsfonts,nccmath}
+\usepackage{subfig}
+\usepackage{svg}
+\usepackage{graphicx}
+\usepackage{algorithmic}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[sorting=none,backend=biber,bibstyle=numeric,citestyle=numeric-comp]{biblatex}
+
+
+\addbibresource{bibliography.bib}
+
+\usepackage{quoting}
+\quotingsetup{font=small, font=itshape}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+\begin{document}
+
+\title{HuggingGreen - A Probabilistic Attention-Based Method for Energy Efficiency}
+
+\author{\IEEEauthorblockN{Mattia Limone}
+\IEEEauthorblockA{\textit{Dipartimento di Informatica} \\
+\textit{Università degli Studi di Salerno}}
+\and
+\IEEEauthorblockN{Carmine Iannotti}
+\IEEEauthorblockA{\textit{Dipartimento di Informatica} \\
+\textit{Università degli Studi di Salerno}}
+}
+
+\maketitle
+\input{sections/abstract}
+
+\input{sections/introduction}
+\input{sections/state_of_art}
+\input{sections/goals}
+\input{sections/dataset}
+\input{sections/preprocessing}
+\input{sections/metrics}
+\input{sections/model}
+\input{sections/conclusioni}
+\input{sections/future_plans}
+\printbibliography[heading=bibintoc]
+\end{document}

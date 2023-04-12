@@ -1,0 +1,21 @@
+\section{Related works}
+\label{relatedwork}
+Gabbur et al. \cite{DBLP:journals/corr/abs-2010-15583} proposed a probabilistic interpretation of attention and suggested the use of Expectation Maximization algorithms for online adaptation of key and value model parameters, which can improve transformer model performance in tasks that require adaptation to new information during inference. Nguyen et al. \cite{DBLP:journals/corr/abs-2110-08678,} proposed a novel transformer architecture called Transformer-MGK, which replaces redundant attention heads in transformers with a mixture of Gaussian keys. Transformer-MGK accelerates training and inference, has fewer parameters, and achieves comparable or better accuracy across tasks than its conventional transformer counterpart. This work highlights the potential of using mixture models to improve transformer performance and reduce computational complexity. 
+
+\subsection{Transformer}
+Transformers are a type of deep learning model that has revolutionized the field of natural language processing (NLP) and has also been used in computer vision and other fields.
+
+Transformers were first introduced in 2017 by Vaswani et al.\cite{DBLP:journals/corr/VaswaniSPUJGKP17}. The key innovation of transformers is the use of self-attention mechanisms instead of recurrent neural networks (RNNs) or convolutional neural networks (CNNs), which were the predominant models for NLP at the time.
+
+Self-attention is a mechanism that allows the model to weigh the importance of different parts of the input sequence when making predictions. This mechanism allows the model to handle long-range dependencies much better than RNNs or CNNs, which makes them ideal for NLP tasks such as language modeling, machine translation, and sentiment analysis.
+
+Transformers consist of an encoder and a decoder. The encoder takes in the input sequence and produces a sequence of hidden representations, while the decoder takes in the output of the encoder and generates the output sequence. The key to the success of transformers is the use of multi-head attention, which allows the model to focus on different parts of the input sequence simultaneously.
+
+\subsection{Vision Transformer}
+Vision Transformer (ViT), introduced by Dosovitskiy et al.  \cite{DBLP:journals/corr/abs-2010-11929}, is a deep learning model that uses the transformer architecture for image classification. 
+
+Traditionally, convolutional neural networks (CNNs) have been the dominant model architecture for image classification tasks. However, ViT uses the transformer architecture to process image data without using any convolutional layers.
+
+In ViT, the image is divided into a set of fixed-size patches, and each patch is treated as a token. These tokens are then processed by a transformer encoder, which allows the model to capture global information about the image. The transformer encoder consists of multiple layers, each containing a multi-head self-attention mechanism and a position-wise feedforward network.
+
+ViT achieves state-of-the-art results on several benchmark image classification datasets, including ImageNet and CIFAR-100. One of the benefits of ViT is that it allows for better generalization to out-of-distribution data since it relies on global features instead of local patterns.

@@ -1,0 +1,21 @@
+\section{Evaluation Metrics}
+\label{metrics}
+Since the goal of our work is to obtain a more energy-efficient model, the energy consumption due to the use of RAMs, GPUs and CPUs will be monitored throughout the pipeline in order to identify the most affected hardware parts.
+
+Furthermore, since we aimed to build a model that has comparable performance to other proposals in the literature, the trade-off between Energy Consumption/micro-average F1 Score (\ref{eq:3}) will also be considered.
+
+The micro-average F1 score (\ref{eq:3}) is a commonly used performance metric in machine learning classification tasks. It is a type of F1 score that is calculated by taking the overall precision and recall across all classes, and then using these values to compute a single F1 score.
+
+In order to calculate the micro-average F1 score, we first need to calculate the precision and recall for each class separately. Precision (\ref{eq:1}) measures the fraction of true positives out of all predicted positives for a given class, while Recall (\ref{eq:2}) measures the fraction of true positives out of all actual positives for that class.
+
+Once we have calculated the precision and recall for each class, we can compute the micro-average F1 score as the harmonic mean of the overall precision and recall:
+
+\begin{equation} \label{eq:1}
+Precision_{\mu\text{-}avg} = \frac{\sum_{i=1}^{n} TP_{i}}{\sum_{i=1}^{n} TP_{i} + \sum_{i=1}^{n} FP_{i}}
+\end{equation}
+\begin{equation} \label{eq:2}
+Recall_{\mu\text{-}avg} = \frac{\sum_{i=1}^{n} TP_{i}}{\sum_{i=1}^{n} TP_{i} + \sum_{i=1}^{n} FN_{i}}\\
+\end{equation}
+\begin{equation} \label{eq:3}
+F1\;Score_{\mu\text{-}avg} = 2 \cdot \frac{Precision_{\mu\text{-}avg} \cdot Recall_{\mu\text{-}avg}}{Precision_{\mu\text{-}avg} + Recall_{\mu\text{-}avg}}
+\end{equation}
