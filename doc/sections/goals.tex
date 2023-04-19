@@ -1,7 +1,6 @@
 \section{Goals and Research Questions}
 \label{goal}
-The goal of this study is to assess whether a probabilistic approach as well as different training techniques results in an energy-efficient model with less impact on the environment. Specifically, our work is structured around four
-research questions (\textbf{RQs}).
+The goal of this study is to assess whether a probabilistic approach as well as different training techniques results in an energy-efficient model with less impact on the environment. Based on this, after an analysis on the topic, we have structured our research around three research questions (\textbf{RQs}).
 
 \medskip
 
@@ -30,6 +29,6 @@ research questions (\textbf{RQs}).
 
 With the first research question (\textbf{RQ$_{1}$}), based on work of Movellan et al. \cite{DBLP:journals/corr/abs-2010-15583}, we want to show that it is possible to use the attention mechanism in a mixture model treating the keys and values as the data points to cluster, and the queries as the test points for which the probability density function is estimated. The attention weights can be used as the mixture weights, and the values associated with each key can be used as the component PDFs. The mixture model can be trained using the MLE method, with the attention mechanism serving as the mixture density estimator. 
 
-In \textbf{RQ$_{2}$} we are going to implement a feature selection layer that use an heuristic to select which part of the image pass to the Vision Transformer model. In a Vision Transformer architecture, each image is divided into $n$ patches. Given a threshold $k < n$ we are going to select the a $k$ sample of patches according to the probability distribution described by the contrast, variance or entropy value of the patches.
+The results on the first research question directly lead to the experimentation of the \textbf{RQ$_{2}$}, in which we are going to implement a feature selection layer that use an heuristic to select which part of the image pass to the Vision Transformer model. In a Vision Transformer architecture, each image is divided into $n$ patches. Given a threshold $k < n$ we are going to select the a $k$ sample of patches according to the probability distribution described by the contrast, variance or entropy value of the patches.
 
 With the last research question (\textbf{RQ$_{3}$}), we want to test if different approaches of training in the Image Recognition task can lead to a faster training and thus lead to lower electricity consumption. In common practice, a transformer-based model first goes through a pre-training phase on a large amount of data and then is fine-tuned for the specific task. We are going to train the model in a different way hoping that it will need less time to achieve the same performance. Firstly a pre-training phase will be done but for much less epochs compared to the common practice, then the model will be trained using the hard-negative contrastive learning where the model is trained to distinguish between a positive pair (consisting of two samples that are similar or belong to the same class) and a hard-negative pair  (consisting of two samples that are dissimilar or belong to different classes) and only then will a specific fine-tuning phase be carried out.

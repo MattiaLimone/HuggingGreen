@@ -16,7 +16,7 @@ Our ViT Architecture in Figure \ref{fig:ViTArchi} follows a three-stage process 
     \end{figure}
 
 
-In this particular implementation, figure \ref{fig:TransformereNCODER}, of the Transformer Encoder block, the Multi-Head Attention layer has been modified to be probabilistic in nature. Specifically, the attention weights computed by the layer are used as mixture weights and the values associated with each key are used as the component of the PDFs.
+In this particular implementation, in Figure \ref{fig:TransformereNCODER}, of the Transformer Encoder block, the Multi-Head Attention layer has been modified to be probabilistic in nature. Specifically, the attention weights computed by the layer are used as mixture weights and the values associated with each key are used as the component of the PDFs.
 
 This modification allows for a more flexible and expressive representation of the attention mechanism. By using a probabilistic approach, the model can capture a wider range of dependencies between different positions in the sequence.
     \begin{figure}[htp]
