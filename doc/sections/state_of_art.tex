@@ -2,24 +2,9 @@
 \label{relatedwork}
 Convolutional neural networks (CNNs) have been widely used for image recognition tasks, but recent studies have shown that vision transformers (ViTs) can outperform CNNs on several benchmark datasets \cite{9790134}. However, ViTs have high computational and memory requirements, making them challenging to deploy on resource-constrained devices.
 
+Convolutional Neural Networks (CNN) are a class of artificial neural networks that were primarily developed for image and video processing. They automatically detect important features in an image using convolution filters, which produce an activation map that represents the relevant image features. CNNs were first introduced by Yann LeCun et al. \cite{lecun1995convolutional} in 1998, and have since become one of the most effective methods for image processing. They have been successfully applied in a wide range of applications, including image recognition, text classification, and medical image analysis.  
 
-
-Transformers are a type of deep learning model that has revolutionized the field of natural language processing (NLP) and has also been used in computer vision and other fields.
-
-Transformers were first introduced in 2017 by Vaswani et al.\cite{DBLP:journals/corr/VaswaniSPUJGKP17}. The key innovation of transformers is the use of self-attention mechanisms instead of recurrent neural networks (RNNs) or convolutional neural networks (CNNs), which were the predominant models for NLP at the time.
-
-Self-attention is a mechanism that allows the model to weigh the importance of different parts of the input sequence when making predictions. This mechanism allows the model to handle long-range dependencies much better than RNNs or CNNs, which makes them ideal for NLP tasks such as language modeling, machine translation, and sentiment analysis.
-
-Transformers consist of an encoder and a decoder. The encoder takes in the input sequence and produces a sequence of hidden representations, while the decoder takes in the output of the encoder and generates the output sequence. The key to the success of transformers is the use of multi-head attention, which allows the model to focus on different parts of the input sequence simultaneously.
-
-Vision Transformer (ViT), introduced by Dosovitskiy et al.  \cite{DBLP:journals/corr/abs-2010-11929}, is a deep learning model that uses the transformer architecture for image classification. 
-
-Traditionally, convolutional neural networks (CNNs) have been the dominant model architecture for image classification tasks. However, ViT uses the transformer architecture to process image data without using any convolutional layers.
-
-In ViT, the image is divided into a set of fixed-size patches, and each patch is treated as a token. These tokens are then processed by a transformer encoder, which allows the model to capture global information about the image. The transformer encoder consists of multiple layers, each containing a multi-head self-attention mechanism and a position-wise feedforward network.
-
-ViT achieves state-of-the-art results on several benchmark image classification datasets, including ImageNet and CIFAR-100. One of the benefits of ViT is that it allows for better generalization to out-of-distribution data since it relies on global features instead of local patterns.
-
+Transformers are a type of neural network introduced in 2017 by Vaswani et al.\cite{DBLP:journals/corr/VaswaniSPUJGKP17}that use an attention mechanism to model the relationships between different parts of a sequence. They are particularly effective for natural language processing tasks, and have achieved state-of-the-art performance on tasks such as machine translation and text classification. Transformers are highly parallelizable and have also been successfully applied to other types of sequential data, such as images and music.
 
 To address the issues of energy efficiency, several techniques have been proposed to reduce the energy consumption of ViTs. One approach is to use algorithms or heuristics that delete the large amount of redundancy present in self-attention operations. 
 
