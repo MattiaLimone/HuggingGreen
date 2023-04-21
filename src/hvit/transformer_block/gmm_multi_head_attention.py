@@ -7,7 +7,7 @@ from torch.distributions import Normal, MixtureSameFamily, Categorical
 
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, emb_size: int = 768, num_heads: int = 8, dropout: float = 0):
+    def __init__(self, emb_size: int = 768, num_heads: int = 12, dropout: float = 0):
         super().__init__()
         self.emb_size = emb_size
         self.num_heads = num_heads

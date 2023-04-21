@@ -12,6 +12,7 @@ class FViT(nn.Sequential):
                  emb_size: int = 768,
                  img_size: int = 224,
                  depth: int = 12,
+                 num_heads: int = 12,
                  n_classes: int = 1000,
                  top_k: int = 8,
                  heuristic: str = 'contrast',
@@ -24,6 +25,6 @@ class FViT(nn.Sequential):
         super().__init__(
             ImagePatchFilter(patch_size, top_k, heuristic, probabilistic, prob, decay_rate, batch_size, verbose),
             PatchEmbedding(in_channels, patch_size, emb_size, img_size),
-            TransformerEncoder(depth, emb_size=emb_size, **kwargs),
+            TransformerEncoder(depth, emb_size=emb_size, num_heads=num_heads, **kwargs),
             ClassificationHead(emb_size, n_classes)
         )
