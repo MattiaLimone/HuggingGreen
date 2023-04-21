@@ -176,8 +176,6 @@ class ImagePatchFilter(nn.Module):
             contrast_values = self.get_distribution_vector(patches, self.heuristic)
             # Create a mask to set the non-selected patches to zero
             mask = self.get_topk_patches_mask(patches, contrast_values)
-            return mask
-            '''
             # Reshape the mask tensor to match the input image tensor shape
             batch_size, num_patches, num_channels, patch_height, patch_width = mask.size()
             height = num_patches // (images.size(-1) // self.patch_size)
@@ -187,7 +185,6 @@ class ImagePatchFilter(nn.Module):
             mask = mask.view(batch_size, num_channels, height * patch_height, width * patch_width)
             # Return the filtered image
             return mask
-            '''
         else:
             # Return the unfiltered image
-            return self.divide_in_patches(images)
+            return images

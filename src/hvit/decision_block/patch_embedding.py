@@ -17,12 +17,23 @@ class PatchEmbedding(nn.Module):
         self.cls_token = nn.Parameter(torch.randn(1, 1, emb_size))
         self.positions = nn.Parameter(torch.randn((img_size // patch_size) ** 2 + 1, emb_size))
         self.emb_size = emb_size
+    '''
     def forward(self, x: Tensor) -> Tensor:
-        # b, _, _, _ = x.shape
         b, p, c, _, _ = x.shape
         x = x.reshape(b * p, c, self.patch_size, self.patch_size)
         x = self.projection(x)
         x = x.reshape(b, p, self.emb_size)
+        cls_tokens = repeat(self.cls_token, '() n e -> b n e', b=b)
+        # prepend the cls token to the input
+        x = torch.cat([cls_tokens, x], dim=1)
+        # add position embedding
+        x += self.positions
+        return x
+    '''
+    def forward(self, x: Tensor) -> Tensor:
+        print(x.shape)
+        b, _, _, _ = x.shape
+        x = self.projection(x)
         cls_tokens = repeat(self.cls_token, '() n e -> b n e', b=b)
         # prepend the cls token to the input
         x = torch.cat([cls_tokens, x], dim=1)
