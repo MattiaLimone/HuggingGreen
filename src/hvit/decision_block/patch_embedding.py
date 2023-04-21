@@ -31,7 +31,6 @@ class PatchEmbedding(nn.Module):
         return x
     '''
     def forward(self, x: Tensor) -> Tensor:
-        print(x.shape)
         b, _, _, _ = x.shape
         x = self.projection(x)
         cls_tokens = repeat(self.cls_token, '() n e -> b n e', b=b)
